@@ -1,0 +1,21 @@
+{
+  "name": "longwang",
+  "version": "1.0.0",
+  "description": "个人博客",
+  "main": "index.js",
+  "author": "longwang",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "d": "bash deploy.sh"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-nprogress": "^1.8.2",
+    "core-js": "^3.9.1",
+    "vuepress": "^1.8.2"
+  },
+  "dependencies": {
+    "vuepress-theme-reco": "^1.6.6"
+  }
+}

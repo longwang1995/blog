@@ -1,7 +1,14 @@
 ---
 home: true
-heroImage: /hero.png
-heroText: 欢迎来到我的博客
+heroImage: /logo.jpg
+heroImageStyle: {
+  maxHeight: '200px',
+  display: block,
+  borderRadius: '50%',
+  boxShadow: '0 5px 18px rgba(0,0,0,0.2)'
+}
+heroText: null
+bgImage: '/banner.jpg'
 tagline: 生命不息，折腾不止
 footer: MIT Licensed | Copyright © 2021-present Evan You
 ---

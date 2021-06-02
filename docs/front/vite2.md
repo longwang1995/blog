@@ -61,18 +61,16 @@ resolve: {
 
 **_注意_** ：在 `Vite setup` 中不能使用 `require()`
 
-```js
+```vue
 <script setup>
-  // 错误： const img = require("@assets/img/about/icon.png"); // 正确： import
-  img from "@assets/img/about/icon.png";
+  // 错误：
+  const img = require("@assets/img/about/icon.png"); 
+  // 正确：
+  import img from "@assets/img/about/icon.png";
 </script>
 ```
 
-了解更多 `setup rfc` 请移步[官方文档](https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md#closed-by-default)
-
 ### 全局 `less` 变量的使用
-
-*注意：* 在 `setup script` 中暂时无法使用 `name`
 
 ```js
 css: {
@@ -88,7 +86,7 @@ css: {
 
 #### 基本例子
 
-```js
+```vue
 <script setup>
   // 导入的组件也可以直接在模板中使用
   import Foo from './Foo.vue'
@@ -110,7 +108,7 @@ css: {
 
 #### 使用 `Props` 和 `Emits`
 
-```js
+```vue
 <script setup>
   import { defineProps, defineEmit } from 'vue'
 
@@ -125,22 +123,23 @@ css: {
 
 #### 使用 `await`
 
-```js
+```vue
 <script setup>
   const post = await fetch(`/api/post/1`).then((r) => r.json())
 </script>
 ```
 
+了解更多 `setup rfc` 请移步[官方文档](https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md#closed-by-default)
 
-### 配置 `postcss.config.js` 进行rem单位转换
+### 配置 `postcss.config.js` 进行 rem 单位转换
 
 ```js
 module.exports = {
   plugins: {
     "postcss-pxtorem": {
       rootValue: 37.5,
-      propList: ['*']
-    }
-  }
-}
+      propList: ["*"],
+    },
+  },
+};
 ```

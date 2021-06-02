@@ -1,20 +1,19 @@
 ---
 title: VuePress + GitHub Pages搭建个人博客
-description:  VuePress + vuepress-theme-reco + GitHub Pages搭建个人博客
+description: VuePress + vuepress-theme-reco + GitHub Pages搭建个人博客
 date: 2021-03-26 23:38:00
 author: 龙旺
-sidebar: 'auto'
+sidebar: "auto"
 categories:
- - 技术分享
- - 其他
+  - 技术分享
+  - 其他
 tags:
- - VuePress
- - Markdown
+  - VuePress
+  - Markdown
 publish: true
 sticky: 1
 ---
 
-# VuePress + GitHub Pages搭建个人博客
 ## 快速上手
 
 ::: warning 前提条件
@@ -25,13 +24,13 @@ VuePress 需要 [Node.js](https://nodejs.org/en/) >= 8.6
 
 1. 创建并进入一个新目录
 
-   ``` bash
+   ```bash
    mkdir vuepress-starter && cd vuepress-starter
    ```
 
 2. 使用你喜欢的包管理器进行初始化
 
-   ``` bash
+   ```bash
    yarn init # npm init
    ```
 
@@ -39,7 +38,7 @@ VuePress 需要 [Node.js](https://nodejs.org/en/) >= 8.6
 
    我们已经不再推荐全局安装 VuePress
 
-   ``` bash
+   ```bash
    yarn add -D vuepress # npm install -D vuepress
    ```
 
@@ -49,7 +48,7 @@ VuePress 需要 [Node.js](https://nodejs.org/en/) >= 8.6
 
 4. 创建你的第一篇文档
 
-   ``` bash
+   ```bash
    mkdir docs && echo '# Hello VuePress' > docs/README.md
    ```
 
@@ -57,7 +56,7 @@ VuePress 需要 [Node.js](https://nodejs.org/en/) >= 8.6
 
    这一步骤是可选的，但我们推荐你完成它。在下文中，我们会默认这些 scripts 已经被添加。
 
-   ``` json
+   ```json
    {
      "scripts": {
        "docs:dev": "vuepress dev docs",
@@ -68,7 +67,7 @@ VuePress 需要 [Node.js](https://nodejs.org/en/) >= 8.6
 
 6. 在本地启动服务器
 
-   ``` bash
+   ```bash
    yarn docs:dev # npm run docs:dev
    ```
 
@@ -110,20 +109,25 @@ module.exports = {
       { text: "前端", link: "/front/" },
       { text: "Git", link: "/git/" },
       { text: "其他", link: "/outh/" },
-      { text: "GitHub", link: "https://github.com/longwang1995", target: "_blank" },
+      {
+        text: "GitHub",
+        link: "https://github.com/longwang1995",
+        target: "_blank",
+      },
     ],
     sidebar: {
       "/front/": ["", "css", "js", "vue", "mobile"],
       "/git/": [""],
-      "/outh/": ["", "vuepress"]
+      "/outh/": ["", "vuepress"],
     },
   },
 };
-
 ```
 
-## 主题配置`vuepress-theme-reco`
+## 主题配置 `vuepress-theme-reco`
+
 1. 安装
+
 ```bash
 npm install vuepress-theme-reco --save-dev
 
@@ -131,17 +135,20 @@ npm install vuepress-theme-reco --save-dev
 
 yarn add vuepress-theme-reco
 ```
+
 2. 引用
+
 ```javascript
 // .vuepress/config.js
 
 module.exports = {
-  theme: 'reco'
-}  
+  theme: "reco",
+};
 ```
-3. 具体配置请移步[vuepress-theme-reco文档](https://vuepress-theme-reco.recoluan.com/)
 
-## 部署GitHub Pages
+3. 具体配置请移步 [vuepress-theme-reco 文档](https://vuepress-theme-reco.recoluan.com/)
+
+## 部署 GitHub Pages
 
 1. 在 `docs/.vuepress/config.js` 中设置正确的 `base`。
 
@@ -151,7 +158,7 @@ module.exports = {
 
 2. 在你的项目中，创建一个如下的 `deploy.sh` 文件（请自行判断去掉高亮行的注释）:
 
-``` bash{13,20,23}
+```bash{13,20,23}
 #!/usr/bin/env sh
 
 # 确保脚本抛出遇到的错误
@@ -177,4 +184,14 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
 cd -
+```
+
+3. 在 `package.json` 中配置 `script` 命令：
+
+```json
+"scripts": {
+  "dev": "vuepress dev docs",
+  "build": "vuepress build docs",
+  "d": "bash deploy.sh"
+},
 ```

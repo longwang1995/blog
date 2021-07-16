@@ -108,3 +108,92 @@ document.body.style.removeProperty("--connt");
   -webkit-text-fill-color: @theme; // 设置input字体颜色
 }
 ```
+
+### css 等比缩放
+
+- 使用 `padding` 实现
+
+```css
+.aspectratio-container {
+  width: 50vmin; /* 用户根据自己需要设置相应的值 */
+
+  /* 布局方案可以调整 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 用来撑开aspectratio-container高度 */
+.aspectratio-container::after {
+  content: "";
+  width: 1px;
+  padding-bottom: 56.25%;
+
+  /*元素的宽高比*/
+  margin: -1px;
+  z-index: -1;
+}
+```
+
+- 使用自定义属性实现
+
+```css
+.container {
+  --ratio: 16/9;
+  height: calc(var(--width) * 1 / (var(--ratio)));
+  width: 100%;
+}
+```
+
+- 使用 `aspect-ratio` 实现
+
+```css
+.container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+```
+
+### css 滚动捕获
+
+```css
+.container {
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 20px;
+}
+
+img {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+```
+
+### css 沟槽
+
+CSS 的 `gap` 属性是一个简写属性，分为 `row-gap` 和 `column-gap` ： ​
+
+<img src='https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ba289b4eb54845cf986cb4474c31d1f3~tplv-k3u1fbpfcp-zoom-1.image'>
+
+该属性 `gap` 到目前为止只能运用于多列布局，Flexbox 布局和网格布局的容器上： ​
+
+```css
+// 多列布局
+.multi__column {
+  gap: 5ch
+}
+
+// Flexbox布局
+.flexbox {
+  display: flex;
+  gap: 20px
+}
+
+// Grid布局
+.grid {
+  display: grid;
+  gap: 10vh 20%
+}
+```

@@ -1,7 +1,7 @@
 <template>
 	<div class="main">
 		<div class="item-wrap" v-for="item in list">
-			<div class="item">
+			<div class="item" @click.stop="handleClick(item)">
 				<div class="cover-wrap">
 					<img :src="item.cover" :alt="item.name" class="cover" />
 				</div>
@@ -22,7 +22,16 @@ export default {
 			list,
 		}
 	},
-	mounted() {},
+	methods: {
+		handleClick(item) {
+			console.log(item)
+			
+			item.url && window.open(item.url, '_blank')
+		}
+	},
+	mounted() {
+
+	},
 }
 </script>
 <style scoped>
@@ -54,18 +63,19 @@ export default {
 }
 
 .cover-wrap {
-  width: 100%;
-  padding-bottom: 145%;
-  position: relative;
-  overflow: hidden;
+	width: 100%;
+	padding-bottom: 145%;
+	position: relative;
+	overflow: hidden;
 }
 
 .item .cover {
 	position: absolute;
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
 	display: block;
+	cursor: pointer;
 }
 
 .meta {

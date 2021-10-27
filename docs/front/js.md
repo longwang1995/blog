@@ -42,3 +42,11 @@ export const filterParams = (object) => {
   return result
 }
 ```
+
+## 隐藏手机号中间四位数
+```js
+export const telFormat = (tel) => {
+  	tel = String(tel); 
+    return tel.substr(0,3) + "****" + tel.substr(7);
+};
+```

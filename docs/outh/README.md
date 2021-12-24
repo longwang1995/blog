@@ -7,3 +7,7 @@ sidebar: 'auto'
 publish: false
 ---
 # 略。。。
+
+```sh
+npm --registry https://registry.npm.taobao.org install express
+```

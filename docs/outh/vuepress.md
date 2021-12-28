@@ -1,7 +1,7 @@
 ---
 title: VuePress + GitHub Pages搭建个人博客
 description: VuePress + vuepress-theme-reco + GitHub Pages搭建个人博客
-date: 2021-03-26 23:38:00
+date: 2021-12-28
 author: 龙旺
 sidebar: "auto"
 categories:
@@ -195,3 +195,46 @@ cd -
   "d": "bash deploy.sh"
 },
 ```
+
+## 添加评论系统
+
+### 使用 `Vusse`
+
+安装官方主题插件 `@vuepress-reco/vuepress-plugin-comments`
+
+```sh
+yarn add @vuepress-reco/vuepress-plugin-comments
+```
+
+#### 选择你要使用的代码托管平台
+
+Vssue 支持通过 GitHub, Gitlab, Bitbucket 或者 Gitee 的 Issue 系统来为你的静态页面提供评论功能，你可以选择其中之一来使用。
+
+前往 [支持的代码托管平台 - 创建 OAuth App](https://vuepress-theme-hope.github.io/comment/zh/guide/supported-platforms/) 查看详细指引。
+
+完成这一步之后，你将会配置好一个 OAuth App，并得到对应的 `client id`和 `client secret`，它们将会用于 Vssue 的使用。
+
+- `owner`: 对应 repository 的拥有者帐号或者团队
+- `repo`: 用来存储评论的 repository
+- `clientId`: OAuth App 的 `client id`
+- `clientSecret`: OAuth App 的 `client secret` (只有在使用某些平台时需要)
+
+
+#### Vusse配置
+
+```js
+// .vuepress/config.js
+module.exports = {
+  theme: 'reco',
+  themeConfig: {
+    vssueConfig: {
+      platform: 'github',
+      owner: 'OWNER_OF_REPO',
+      repo: 'NAME_OF_REPO',
+      clientId: 'YOUR_CLIENT_ID',
+      clientSecret: 'YOUR_CLIENT_SECRET',
+    }
+  }  
+}
+```
+#### GitHub OAuth App [open](https://vuepress-theme-hope.github.io/comment/zh/guide/github/)

@@ -44,7 +44,7 @@ module.exports = {
     vssueConfig: {
       platform: 'github',
       owner: "longwang1995",
-      repo: "Vusse",
+      repo: "blog",
       clientId: "41acb173ba1e01c3724f",
       clientSecret: "46ec455e2fcfc06487640f5da3af87b3eaeb8488",
     }

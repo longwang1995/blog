@@ -1212,7 +1212,7 @@
 
 "@vuepress-reco/vuepress-plugin-comments@^1.6.0":
   version "1.6.0"
-  resolved "https://registry.npm.taobao.org/@vuepress-reco/vuepress-plugin-comments/download/@vuepress-reco/vuepress-plugin-comments-1.6.0.tgz#df9fb43ce032d429b4c6defcaef461420593f69f"
+  resolved "https://registry.npmmirror.com/@vuepress-reco/vuepress-plugin-comments/download/@vuepress-reco/vuepress-plugin-comments-1.6.0.tgz#df9fb43ce032d429b4c6defcaef461420593f69f"
   integrity sha1-35+0POAy1Cm0xt78rvRhQgWT9p8=
   dependencies:
     "@vssue/api-bitbucket-v2" "^1.1.1"

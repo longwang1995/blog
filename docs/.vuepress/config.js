@@ -41,5 +41,12 @@ module.exports = {
       { text: "片库", link: "/movie/", icon: "reco-document" },
       { text: "GitHub", link: "https://github.com/longwang1995", icon: "reco-github", target: "_blank" },
     ],
+    vssueConfig: {
+      platform: 'github',
+      owner: "longwang1995",
+      repo: "Vusse",
+      clientId: "41acb173ba1e01c3724f",
+      clientSecret: "46ec455e2fcfc06487640f5da3af87b3eaeb8488",
+    }
   }
 };

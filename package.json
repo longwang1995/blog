@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "d": "bash deploy.sh"
+    "d": "sh deploy.sh"
   },
   "devDependencies": {
     "@vuepress/plugin-nprogress": "^1.8.2",

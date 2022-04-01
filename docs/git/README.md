@@ -61,6 +61,7 @@ publish: true
 6. 验证已签署的标签：git tag -v，如：`git tag -v v1.5`
 7. 创建轻量级标签：`git tag v1.4`
 8. 将标签推送到远程仓库中：`git push origin v1.5`, 将本地所有标签全部推送到远程仓库中：`git push origin --tags`
+9. 删除本地tag：`git tag -d $(git tag -l)`
 >分制管理
 1. 创建分支：`git branch <branch-name>`
 2. 从当前所处的分支切换到其他分支：`git checkout <branch-name>`

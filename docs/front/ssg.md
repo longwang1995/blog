@@ -70,7 +70,21 @@ export const createApp = ViteSSG(
 
 ## 新建文件夹 `pages` 用于存放页面代码
 
+`vite-plugin-pages` 会自动根具 `pages` 目录下的文件生成相应的路由
+```tree
+─pages
+    index.vue
+    login.vue
+```
 
-<Vssue title="Vssue Demo" />
+## `@vueuse/head` 的使用[文档](https://github.com/vueuse/head)
+设置header中的信息
+```vue
+<script setup>
+import { useHead } from '@vueuse/head'
 
-
+useHead({
+	title: '登录',
+})
+</script>
+```

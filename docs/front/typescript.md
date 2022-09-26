@@ -225,7 +225,7 @@ const add: addType = (num1, num2) => {
 
 我们定义一个 Person 类型和 Student 类型，Student 继承自 Person，可以有下面四种方式
 
-$\color{#666666}{interface 继承 interface}$
+interface 继承 interface
 
 ```ts
 interface Person {
@@ -241,7 +241,7 @@ const person: Student = {
 };
 ```
 
-$\color{#666666}{type 继承 type}$
+type 继承 type
 
 ```ts
 type Person = {
@@ -250,7 +250,7 @@ type Person = {
 type Student = Person & { grade: number  }    用交叉类型
 ```
 
-$\color{#666666}{interface 继承 type}$
+interface 继承 type
 
 ```ts
 type Person = {
@@ -262,7 +262,7 @@ interface Student extends Person {
 }
 ```
 
-$\color{#666666}{type 继承 interface}$
+type 继承 interface
 
 ```ts
 interface Person {
@@ -276,45 +276,47 @@ type Student = Person & { grade: number  }    用交叉类型
 
 #### type 可以，interface 不行
 
-$\color{#666666}{声明基本类型、联合类型、交叉类型、元组}$
+声明基本类型、联合类型、交叉类型、元组
 
 ```ts
-type Name = string                              // 基本类型
+type Name = string; // 基本类型
 
-type arrItem = number | string                  // 联合类型
+type arrItem = number | string; // 联合类型
 
-const arr: arrItem[] = [1,'2', 3]
+const arr: arrItem[] = [1, "2", 3];
 
-type Person = { 
-  name: Name 
-}
+type Person = {
+  name: Name;
+};
 
-type Student = Person & { grade: number  }       // 交叉类型
+type Student = Person & { grade: number }; // 交叉类型
 
-type Teacher = Person & { major: string  } 
+type Teacher = Person & { major: string };
 
-type StudentAndTeacherList = [Student, Teacher]  // 元组类型
+type StudentAndTeacherList = [Student, Teacher]; // 元组类型
 
-const list:StudentAndTeacherList = [
-  { name: 'lin', grade: 100 }, 
-  { name: 'liu', major: 'Chinese' }
-]
+const list: StudentAndTeacherList = [
+  { name: "lin", grade: 100 },
+  { name: "liu", major: "Chinese" },
+];
 ```
 
-#### interface可以，type 不行
+#### interface 可以，type 不行
 
-$\color{#666666}{合并重复声明}$
+合并重复声明
+
 ```ts
 interface Person {
-    name: string
+  name: string;
 }
 
-interface Person {         // 重复声明 interface，就合并了
-    age: number
+interface Person {
+  // 重复声明 interface，就合并了
+  age: number;
 }
 
 const person: Person = {
-    name: 'lin',
-    age: 18
-}
+  name: "lin",
+  age: 18,
+};
 ```

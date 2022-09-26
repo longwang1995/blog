@@ -190,7 +190,131 @@ let myArray: ReadonlyStringArray = ["Alice", "Bob"];
 myArray[2] = "Mallory"; // error!
 ```
 
-### 类类型
+### 类型`type`
 
 ```ts
+type Name = string;
+type NameResolver = () => string;
+type NameOrResolver = Name | NameResolver; // 联合类型
+function getName(n: NameOrResolver): Name {
+  if (typeof n === "string") {
+    return n;
+  } else {
+    return n();
+  }
+}
+```
+
+### 两者相同点
+
+#### 都可以定义对象或者函数
+
+```ts
+type addType = (num1: number, num2: number) => number;
+
+interface addType {
+  (num1: number, num2: number): number;
+}
+
+const add: addType = (num1, num2) => {
+  return num1 + num2;
+};
+```
+
+#### 都允许被继承
+
+我们定义一个 Person 类型和 Student 类型，Student 继承自 Person，可以有下面四种方式
+
+$\color{#666666}{interface 继承 interface}$
+
+```ts
+interface Person {
+  name: string;
+}
+interface Student extends Person {
+  grade: number;
+}
+
+const person: Student = {
+  name: "lin",
+  grade: 100,
+};
+```
+
+$\color{#666666}{type 继承 type}$
+
+```ts
+type Person = {
+  name: string
+}
+type Student = Person & { grade: number  }    用交叉类型
+```
+
+$\color{#666666}{interface 继承 type}$
+
+```ts
+type Person = {
+  name: string;
+};
+
+interface Student extends Person {
+  grade: number;
+}
+```
+
+$\color{#666666}{type 继承 interface}$
+
+```ts
+interface Person {
+  name: string
+}
+
+type Student = Person & { grade: number  }    用交叉类型
+```
+
+### 两者不同点
+
+#### type 可以，interface 不行
+
+$\color{#666666}{声明基本类型、联合类型、交叉类型、元组}$
+
+```ts
+type Name = string                              // 基本类型
+
+type arrItem = number | string                  // 联合类型
+
+const arr: arrItem[] = [1,'2', 3]
+
+type Person = { 
+  name: Name 
+}
+
+type Student = Person & { grade: number  }       // 交叉类型
+
+type Teacher = Person & { major: string  } 
+
+type StudentAndTeacherList = [Student, Teacher]  // 元组类型
+
+const list:StudentAndTeacherList = [
+  { name: 'lin', grade: 100 }, 
+  { name: 'liu', major: 'Chinese' }
+]
+```
+
+#### interface可以，type 不行
+
+$\color{#666666}{合并重复声明}$
+```ts
+interface Person {
+    name: string
+}
+
+interface Person {         // 重复声明 interface，就合并了
+    age: number
+}
+
+const person: Person = {
+    name: 'lin',
+    age: 18
+}
 ```

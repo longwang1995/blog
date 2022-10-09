@@ -1,5 +1,5 @@
 ---
-title: 在打包环境中使用 ECharts
+title: 在Vue项目中使用 ECharts
 description: 在Vue项目中使用Echarts
 date: 2021-04-08 9:30:00
 author: 龙旺

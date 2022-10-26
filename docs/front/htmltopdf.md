@@ -1,5 +1,5 @@
 ---
-title: 使用Puppeteer无头浏览器生成PDF
+title: 使用nodejs + Puppeteer无头浏览器生成PDF
 date: 2021-12-22
 author: 龙旺
 tags:
@@ -205,3 +205,6 @@ table thead {
 4. `headerTemplate` 和 `footerTemplate` 设置的页眉和页脚，并不在 html 的 dom 流中，他们不属于`<html/>`也不属于`<body/>`，`html` 的 `dom` 会自动跳过这片区域，与 `word` 类似。因此无法在 `html` 文件中的 `css` 中控制其样式，只能将其样式写入 `Template` 的字符串中，作为行间样式。
 
 5. `footerTemplate` 提供了默认的页码显示支持，将 `span` 标签的 `class` 设置为 `totalPages` 为总页数，设置为 `pageNumber` 为当前页数。除此之外其他地方无法获取页码
+
+生成效果：
+<embed type='application/pdf' width='100%' height='1000px' :src="$withBase('/assets/CPD02997-1651909535703.pdf')"></embed>

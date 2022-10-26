@@ -182,24 +182,75 @@ CSS 的 `gap` 属性是一个简写属性，分为 `row-gap` 和 `column-gap` �
 ```css
 // 多列布局
 .multi__column {
-  gap: 5ch
+  gap: 5ch;
 }
 
 // Flexbox布局
 .flexbox {
   display: flex;
-  gap: 20px
+  gap: 20px;
 }
 
 // Grid布局
 .grid {
   display: grid;
-  gap: 10vh 20%
+  gap: 10vh 20%;
 }
 ```
 
 ### font-variant-numeric
->CSS 属性控制数字，分数和序号标记的替代字形的使用。用于解决数字不等宽的问题
+
+> CSS 属性控制数字，分数和序号标记的替代字形的使用。用于解决数字不等宽的问题
 
 ### scroll-padding-top
->用于header固定布局的情况下锚点跳转时不会被header遮挡
+
+> 用于 header 固定布局的情况下锚点跳转时不会被 header 遮挡
+
+### 设置元素的长宽比
+
+1. padding 方案
+
+```css
+.box-wrap {
+  width: 100px;
+}
+.box {
+  width: 100%;
+  padding-bottom: 100%;
+  background: green;
+}
+```
+
+<div class='box-wrap'>
+  <div class='box'></div>
+</div>
+
+<style>
+  .box-wrap {
+     width: 100px;
+  }
+  .box {
+    width: 100%; 
+    padding-bottom: 100%;
+    background: green;
+  }
+</style>
+
+2. aspect-ratio 方案，解决以前的方案子元素需要使用定位的痛点
+
+```css
+.box2 {
+  width: 100px;
+  aspect-ratio: 1/1;
+  background: green;
+}
+```
+
+<div class='box2'></div>
+<style>
+  .box2 {
+    width: 100px;
+    aspect-ratio: 1/1;
+    background: green;
+  }
+</style>

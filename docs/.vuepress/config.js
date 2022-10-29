@@ -13,7 +13,7 @@ module.exports = {
     ["meta", { name: "google", value: "notranslate" }],
     ["link", { rel: "icon", href: "/logo.jpg" }],
   ],
-  plugins: ["@vuepress/nprogress"],
+  plugins: ["@vuepress/nprogress", "@vuepress-reco/vuepress-plugin-extract-code"],
   themeConfig: {
     logo: "/logo.jpg",
     authorAvatar: "/logo.jpg",

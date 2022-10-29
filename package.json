@@ -11,6 +11,7 @@
     "d": "sh deploy.sh"
   },
   "devDependencies": {
+    "@vuepress-reco/vuepress-plugin-extract-code": "^1.0.4",
     "@vuepress/plugin-nprogress": "^1.8.2",
     "core-js": "^3.9.1",
     "vuepress": "^1.8.2"

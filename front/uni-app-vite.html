@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>uni-app + Vue3 + vite + windicss 实战开发 | 一路向北</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/logo.jpg">
+    <meta name="description" content="在uni-app中使用windicss">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="google" value="notranslate">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b077c0a0.css" as="style"><link rel="preload" href="/blog/assets/js/app.914bfc34.js" as="script"><link rel="preload" href="/blog/assets/js/3.14329318.js" as="script"><link rel="preload" href="/blog/assets/js/1.5bc5bf25.js" as="script"><link rel="preload" href="/blog/assets/js/27.895aed38.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.65a24dae.js"><link rel="prefetch" href="/blog/assets/js/11.b65455df.js"><link rel="prefetch" href="/blog/assets/js/12.3113d3f1.js"><link rel="prefetch" href="/blog/assets/js/13.de5344d6.js"><link rel="prefetch" href="/blog/assets/js/14.d3cd07ae.js"><link rel="prefetch" href="/blog/assets/js/15.8cbd5db7.js"><link rel="prefetch" href="/blog/assets/js/16.7fe4bee6.js"><link rel="prefetch" href="/blog/assets/js/17.d81428ba.js"><link rel="prefetch" href="/blog/assets/js/18.2c96a3fa.js"><link rel="prefetch" href="/blog/assets/js/19.8deaf26a.js"><link rel="prefetch" href="/blog/assets/js/20.8bb05617.js"><link rel="prefetch" href="/blog/assets/js/21.c7755cde.js"><link rel="prefetch" href="/blog/assets/js/22.2d814b09.js"><link rel="prefetch" href="/blog/assets/js/23.48893586.js"><link rel="prefetch" href="/blog/assets/js/24.e37093b6.js"><link rel="prefetch" href="/blog/assets/js/25.213aabb9.js"><link rel="prefetch" href="/blog/assets/js/26.48fd3fd0.js"><link rel="prefetch" href="/blog/assets/js/28.c7a65a9b.js"><link rel="prefetch" href="/blog/assets/js/29.5e684d75.js"><link rel="prefetch" href="/blog/assets/js/30.e4511baf.js"><link rel="prefetch" href="/blog/assets/js/31.a2dca134.js"><link rel="prefetch" href="/blog/assets/js/32.c93cfcff.js"><link rel="prefetch" href="/blog/assets/js/33.26689a83.js"><link rel="prefetch" href="/blog/assets/js/34.fd9e4aaf.js"><link rel="prefetch" href="/blog/assets/js/35.6765ab66.js"><link rel="prefetch" href="/blog/assets/js/36.3b1852f6.js"><link rel="prefetch" href="/blog/assets/js/37.a2b207c4.js"><link rel="prefetch" href="/blog/assets/js/4.fbe9533d.js"><link rel="prefetch" href="/blog/assets/js/5.1d8f8356.js"><link rel="prefetch" href="/blog/assets/js/6.17f9c8a0.js"><link rel="prefetch" href="/blog/assets/js/7.25acd08f.js"><link rel="prefetch" href="/blog/assets/js/8.9b36972e.js"><link rel="prefetch" href="/blog/assets/js/9.f1a419a0.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b077c0a0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-c0d124fa><div data-v-c0d124fa><div class="password-shadow password-wrapper-out" style="display:none;" data-v-30dff670 data-v-c0d124fa data-v-c0d124fa><h3 class="title" data-v-30dff670>一路向北</h3> <p class="description" data-v-30dff670>个人博客</p> <label id="box" class="inputBox" data-v-30dff670><input type="password" value="" data-v-30dff670> <span data-v-30dff670>Konck! Knock!</span> <button data-v-30dff670>OK</button></label> <div class="footer" data-v-30dff670><span data-v-30dff670><i class="iconfont reco-theme" data-v-30dff670></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-30dff670>vuePress-theme-reco</a></span> <span data-v-30dff670><i class="iconfont reco-copyright" data-v-30dff670></i> <a data-v-30dff670><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-c0d124fa><header class="navbar" data-v-c0d124fa><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/logo.jpg" alt="一路向北" class="logo"> <span class="site-name">一路向北</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="undefined"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/技术分享/" class="nav-link"><i class="undefined"></i>
+  技术分享
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/其他/" class="nav-link"><i class="undefined"></i>
+  其他
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/DIY/" class="nav-link"><i class="undefined"></i>
+  DIY
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/Echarts/" class="nav-link"><i class="undefined"></i>
+  Echarts
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/分享/" class="nav-link"><i class="undefined"></i>
+  分享
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/电影/" class="nav-link"><i class="undefined"></i>
+  电影
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/outh/" class="nav-link"><i class="iconfont reco-blog"></i>
+  个人简介
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/blog/movie/" class="nav-link"><i class="iconfont reco-document"></i>
+  片库
+</a></div><div class="nav-item"><a href="https://github.com/longwang1995" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-c0d124fa></div> <aside class="sidebar" data-v-c0d124fa><div class="personal-info-wrapper" data-v-5c49c935 data-v-c0d124fa><img src="/blog/logo.jpg" alt="author-avatar" class="personal-img" data-v-5c49c935> <!----> <div class="num" data-v-5c49c935><div data-v-5c49c935><h3 data-v-5c49c935>21</h3> <h6 data-v-5c49c935>文章</h6></div> <div data-v-5c49c935><h3 data-v-5c49c935>20</h3> <h6 data-v-5c49c935>标签</h6></div></div> <ul class="social-links" data-v-5c49c935></ul> <hr data-v-5c49c935></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="undefined"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/技术分享/" class="nav-link"><i class="undefined"></i>
+  技术分享
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/其他/" class="nav-link"><i class="undefined"></i>
+  其他
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/DIY/" class="nav-link"><i class="undefined"></i>
+  DIY
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/Echarts/" class="nav-link"><i class="undefined"></i>
+  Echarts
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/分享/" class="nav-link"><i class="undefined"></i>
+  分享
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/电影/" class="nav-link"><i class="undefined"></i>
+  电影
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/outh/" class="nav-link"><i class="iconfont reco-blog"></i>
+  个人简介
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/blog/movie/" class="nav-link"><i class="iconfont reco-document"></i>
+  片库
+</a></div><div class="nav-item"><a href="https://github.com/longwang1995" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-30dff670 data-v-c0d124fa><h3 class="title" data-v-30dff670>uni-app + Vue3 + vite + windicss 实战开发</h3> <!----> <label id="box" class="inputBox" data-v-30dff670><input type="password" value="" data-v-30dff670> <span data-v-30dff670>Konck! Knock!</span> <button data-v-30dff670>OK</button></label> <div class="footer" data-v-30dff670><span data-v-30dff670><i class="iconfont reco-theme" data-v-30dff670></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-30dff670>vuePress-theme-reco</a></span> <span data-v-30dff670><i class="iconfont reco-copyright" data-v-30dff670></i> <a data-v-30dff670><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-c0d124fa><div data-v-c0d124fa><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">uni-app + Vue3 + vite + windicss 实战开发</h1> <div data-v-7b22c628><i class="iconfont reco-account" data-v-7b22c628><span data-v-7b22c628>龙旺</span></i> <i class="iconfont reco-date" data-v-7b22c628><span data-v-7b22c628>2022/4/1</span></i> <!----> <i class="tags iconfont reco-tag" data-v-7b22c628><span class="tag-item" data-v-7b22c628>Vite</span><span class="tag-item" data-v-7b22c628>windicss</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="开始"><a href="#开始" class="header-anchor">#</a> 开始</h2> <h3 id="初始化-uni-app-vite2-模板"><a href="#初始化-uni-app-vite2-模板" class="header-anchor">#</a> 初始化 <code>uni-app + vite2</code> 模板</h3> <p>初始化项目模板</p> <div class="language-sh extra-class"><pre class="language-sh"><code>npx degit dcloudio/uni-preset-vue<span class="token comment">#vite-ts my-vue3-project</span>
+</code></pre></div><h3 id="安装配置-windicss"><a href="#安装配置-windicss" class="header-anchor">#</a> 安装配置 <code>windicss</code></h3> <p>添加 <code>windicss</code> 依赖</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">pnpm</span> <span class="token function">add</span> windicss vite-plugin-windicss
+</code></pre></div><p>在跟目录下新建配置文件<code>windi.config.ts</code></p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineConfig <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vite-plugin-windicss&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>在 <code>vite.config.ts</code> 中配置</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> WindiCSS <span class="token keyword">from</span> <span class="token string">'vite-plugin-windicss'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token function">uni</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">WindiCSS</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">]</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>最后在 <code>main.ts</code> 中引用</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createSSRApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">&quot;./App.vue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> setupStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./store'</span>
+<span class="token comment">// @ts-ignore</span>
+<span class="token keyword">import</span> uView <span class="token keyword">from</span> <span class="token string">'./uni_modules/vk-uview-ui'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'virtual:windi.css'</span>
+<span class="token keyword">import</span> <span class="token string">'./static/css/iconfont.css'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">createSSRApp</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>uView<span class="token punctuation">)</span>
+  <span class="token function">setupStore</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    app<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>现在基本上我们的配置算是告一段落了，已经可以 <code>npm run dev:h5</code> 开始在浏览器中运行了。</p> <h3 id="自动导入组件和vue3的api。"><a href="#自动导入组件和vue3的api。" class="header-anchor">#</a> 自动导入组件和Vue3的api。</h3> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">pnpm</span> <span class="token function">add</span> <span class="token parameter variable">-D</span> unplugin-auto-import unplugin-vue-components
+</code></pre></div><p>配置<code>vite.config.ts</code></p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> AutoImport <span class="token keyword">from</span> <span class="token string">&quot;unplugin-auto-import/vite&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Components <span class="token keyword">from</span> <span class="token string">&quot;unplugin-vue-components/vite&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> VueUseComponentsResolver <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;unplugin-vue-components/resolvers&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token function">Components</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      resolvers<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">VueUseComponentsResolver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      dts<span class="token operator">:</span> <span class="token string">'src/components.d.ts'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">AutoImport</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      resolvers<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">VueUseComponentsResolver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      include<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.[tj]sx?$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token comment">// .ts, .tsx, .js, .jsx</span>
+        <span class="token operator">/</span>\<span class="token punctuation">.</span>vue$<span class="token operator">/</span><span class="token punctuation">,</span>
+        <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.vue\?vue</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token comment">// .vue</span>
+        <span class="token operator">/</span>\<span class="token punctuation">.</span>md$<span class="token operator">/</span><span class="token punctuation">,</span> <span class="token comment">// .md</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      imports<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'vue'</span><span class="token punctuation">,</span> <span class="token string">'uni-app'</span><span class="token punctuation">,</span> <span class="token string">'vuex'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token comment">// eslint globals Docs - https://eslint.org/docs/user-guide/configuring/language-options#specifying-globals</span>
+      eslintrc<span class="token operator">:</span> <span class="token punctuation">{</span>
+        enabled<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// Default `false`</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      dts<span class="token operator">:</span> <span class="token string">'src/auto-import.d.ts'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><blockquote><p>生成的文件可以添加到<code>.gitignore</code>。</p></blockquote> <h3 id="记录遇到的坑"><a href="#记录遇到的坑" class="header-anchor">#</a> 记录遇到的坑</h3> <ol><li>一开始在浏览器运行还挺正常的，高高兴兴的写完页面准备拿出手机来预览。<code>npm run dev:mp-weixin</code> 走起，开发工具打开项目。然后报错了😂</li></ol> <div class="language- extra-class"><pre class="language-text"><code>[ WXSS 文件编译错误] 
+ERR: wxss GetCompiledResult: ./app.wxss(3378:5): unexpected `\` at pos 56697
+(env: Windows,mp,1.05.2111300; lib: 2.23.1)
+</code></pre></div><p>找到 <code>app.wxss</code> 查看一下怎么回事，原来<code>windicss</code>生成了class有点问题，生成了带<code>\</code>的类名，这个类目小程序是不支持的。但是咋眼一看这个类名我好像没用到呀，我就在想是不是可以去掉。于是查了查文档，还找到了</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.tab\.left</span> <span class="token punctuation">{</span>
+  <span class="token property">-moz-tab-size</span><span class="token punctuation">:</span> 4<span class="token punctuation">;</span>
+  <span class="token property">-o-tab-size</span><span class="token punctuation">:</span> 4<span class="token punctuation">;</span>
+  <span class="token property">tab-size</span><span class="token punctuation">:</span> 4<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.tab\.width</span> <span class="token punctuation">{</span>
+  <span class="token property">-moz-tab-size</span><span class="token punctuation">:</span> 4<span class="token punctuation">;</span>
+  <span class="token property">-o-tab-size</span><span class="token punctuation">:</span> 4<span class="token punctuation">;</span>
+  <span class="token property">tab-size</span><span class="token punctuation">:</span> 4<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>然后我就找到了一些小程序不支持的，然后去掉不支持的 <code>windicss</code> 插件</p> <blockquote><p><code>windicss</code>全英文文档看不懂的同学（我自己）可以去看<code>tailwindcss</code>的文档，<code>windicss</code>是在<code>tailwindcss</code>上扩展而来的，所以大部分配置都一致。</p></blockquote> <p>设置弃用某些插件写法</p> <div class="language-ts extra-class"><pre class="language-ts"><code>corePlugins<span class="token operator">:</span> <span class="token punctuation">{</span>
+  preflight<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// html基础样式</span>
+  blur<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  tableLayout<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  tabSize<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>设置启用某些插件的写法</p> <div class="language-ts extra-class"><pre class="language-ts"><code>corePlugins<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'padding'</span><span class="token punctuation">,</span> <span class="token operator">...</span><span class="token punctuation">.</span><span class="token punctuation">]</span>
+</code></pre></div><p>文档参考<a href="https://www.tailwindcss.cn/docs/" target="_blank" rel="noopener noreferrer">tailwindcss<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，<a href="https://windicss.org/guide/" target="_blank" rel="noopener noreferrer">windicss<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <ol start="2"><li><p>避免在使用<code>windicss</code>的时候写一些类似 <code>!p-2</code>, <code>h-50%</code> 这样的类名，因为这些编译后会带有<code>\</code>。</p></li> <li><p>用TypeScript的同学可能会遇到找不到<code>unplugin-auto-import</code>的情况，这里我们只需要把它添加到<code>env.d.ts</code>中即可</p></li></ol> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">'unplugin-auto-import'</span><span class="token punctuation">;</span>
+</code></pre></div></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新时间: </span> <span class="time">2022/4/1 17:17:25</span></div></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-bac73764 data-v-c0d124fa><li class="level-2" data-v-bac73764><a href="/blog/front/uni-app-vite.html#开始" class="sidebar-link reco-side-开始" data-v-bac73764>开始</a></li><li class="level-3" data-v-bac73764><a href="/blog/front/uni-app-vite.html#初始化-uni-app-vite2-模板" class="sidebar-link reco-side-初始化-uni-app-vite2-模板" data-v-bac73764>初始化 uni-app + vite2 模板</a></li><li class="level-3" data-v-bac73764><a href="/blog/front/uni-app-vite.html#安装配置-windicss" class="sidebar-link reco-side-安装配置-windicss" data-v-bac73764>安装配置 windicss</a></li><li class="level-3" data-v-bac73764><a href="/blog/front/uni-app-vite.html#自动导入组件和vue3的api。" class="sidebar-link reco-side-自动导入组件和vue3的api。" data-v-bac73764>自动导入组件和Vue3的api。</a></li><li class="level-3" data-v-bac73764><a href="/blog/front/uni-app-vite.html#记录遇到的坑" class="sidebar-link reco-side-记录遇到的坑" data-v-bac73764>记录遇到的坑</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-2a01419c data-v-2a01419c><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-2a01419c><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-2a01419c></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-2a01419c></path></svg></div></div></div>
+    <script src="/blog/assets/js/app.914bfc34.js" defer></script><script src="/blog/assets/js/3.14329318.js" defer></script><script src="/blog/assets/js/1.5bc5bf25.js" defer></script><script src="/blog/assets/js/27.895aed38.js" defer></script>
+  </body>
+</html>

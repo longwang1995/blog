@@ -1,6 +1,6 @@
 ---
-title: GitFlow工作流加云效DevOps实现前端CI/DI
-description: Gulp的使用
+title: GitFlow工作流加
+description: GitFlow工作流
 date: 2022-10-27
 author: 龙旺
 sidebar: "auto"
